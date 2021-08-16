@@ -1,0 +1,29 @@
+h1 {
+  text-align: center;
+  font-family: "Anton", sans-serif;
+}
+
+.art {
+  margin: auto;
+}
+
+td {
+  height: 300px;
+  width: 150px;
+  border: 6px solid white;
+}
+#one {
+  background-color: #48beff;
+}
+#two {
+  background-color: #3dfaff;
+}
+#three {
+  background-color: #43c59e;
+}
+#four {
+  background-color: #3d7068;
+}
+#five {
+  background-color: #14453d;
+}
