@@ -1,100 +1,22 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>ITOMARU'S PORTFOLIO -beta-</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
-  </head>
-  <body class="is-preload">
-    <div id="wrapper">
-      <div id="bg"></div>
-      <div id="overlay"></div>
-      <div id="main">
-        <!-- Header -->
-        <header id="header">
-          <h1>ito &#x270c; Maru</h1>
-          <p>
-            Full Stack Developer &nbsp;&bull;&nbsp; Cyborg &nbsp;&bull;&nbsp;
-            Never asked for this
-          </p>
-          <nav>
-            <ul>
-              <li>
-                <a href="#" class="icon brands fa-blogger"
-                  ><span class="label">blogger</span></a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://twitter.com/izag82161"
-                  class="icon brands fa-twitter"
-                  ><span class="label">Twitter</span></a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="icon brands fa-github"
-                  ><span class="label">Github</span></a
-                >
-              </li>
-              <li>
-                <a href="https://www.youtube.com/channel/UCnyuiUjR3xaXuVuIt-5Kmdg" class="icon brands fa-youtube"
-                  ><span class="label">YouTube</span></a
-                >
-              </li>
-              <li>
-                <a href="#" class="icon brands fa-amazon"
-                  ><span class="label">Kindle eBooks</span></a
-                >
-              </li>
-              <li>
-                <a href="#" class="icon brands fa-instagram"
-                  ><span class="label">Instagram</span></a
-                >
-              </li>
-              <li>
-                <a href="#" class="icon brands fa-facebook"
-                  ><span class="label">Facebook</span></a
-                >
-              </li>
-              <li>
-                <a
-                  href="mailto:izag8216@gmail.com"
-                  class="icon solid fa-envelope"
-                  ><span class="label">Email</span></a
-                >
-              </li>
-            </ul>
-          </nav>
-        </header>
+<head>
+  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+</head>
+<body style='margin: 0; overflow: hidden;'>
+<!-- ③ シーンを追加 -->
+<a-scene embedded arjs>
+  <!-- ④ マーカーを追加 ここから -->
+  <a-marker preset="hiro">
+    <!-- ⑤ オブジェクトの追加 -->
+    <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#111">
+      <a-animation attribute="position" to="0 1 0" direction="alternate" dur="2000" repeat="indefinite">
+      </a-animation>
+    </a-sphere>
+  </a-marker>
 
-        <!-- Footer -->
-        <footer id="footer">
-          <span class="copyright"
-            >&copy; Untitled. Design:
-            <a href="http://html5up.net">HTML5 UP</a>.</span
-          >
-        </footer>
-      </div>
-    </div>
-    <script>
-      window.onload = function () {
-        document.body.classList.remove("is-preload");
-      };
-      window.ontouchmove = function () {
-        return false;
-      };
-      window.onorientationchange = function () {
-        document.body.scrollTop = 0;
-      };
-    </script>
-  </body>
+  <!-- ⑥ カメラを追加 -->
+  <a-entity camera></a-entity>
+</a-scene>
+</body>
 </html>
